@@ -1,0 +1,50 @@
+
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-segment value="signin">
+      <ion-segment-button value="signup" (click)="onRegisterButtonPressed()">
+        Sign Up
+      </ion-segment-button>
+      <ion-segment-button value="signin" checked>
+        Sign In
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-content">
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <h2 class="form-title">Welcome Back!</h2>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email" ></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="password" type="password" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Remember Password</ion-label>
+      <a class="forgot-password" href="#">Forgot Password?</a>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Sign In</ion-button>
+
+    <div class="divider">Or sign in with</div>
+
+    <div class="social-buttons">
+      <ion-button color="light">Google</ion-button>
+      <ion-button color="light">Facebook</ion-button>
+    </div>
+
+
+    <div *ngIf="loginError" class="error-message">
+      {{ loginError }}
+    </div>
+  </form>
+

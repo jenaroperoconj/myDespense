@@ -1,0 +1,48 @@
+
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-segment value="signup">
+      <ion-segment-button value="signup" checked>
+        Sign Up
+      </ion-segment-button>
+      <ion-segment-button value="signin" (click)="onLoginButtonPressed()">
+        Sign In
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-content">
+  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <h2 class="form-title">Create An Account</h2>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email" placeholder="Enter your email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="password" type="password" placeholder="Enter your password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input formControlName="confirmPassword" type="password" placeholder="Confirm your password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="registerForm.invalid">Sign Up</ion-button>
+
+    <div class="divider">Or sign up with</div>
+
+    <div class="social-buttons">
+      <ion-button color="light">Google</ion-button>
+      <ion-button color="light">Facebook</ion-button>
+    </div>
+
+    <div *ngIf="registerError" class="error-message">
+      {{ registerError }}
+    </div>
+  </form>
+</ion-content>
+

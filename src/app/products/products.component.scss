@@ -1,0 +1,28 @@
+ion-item {
+    --padding-start: 10px;
+    --inner-padding-end: 10px;
+  }
+  
+  ion-avatar {
+    --border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-icon {
+    color: #4a4a4a;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+    --background: #f4f4f4;
+    --color: #4a4a4a;
+    border: 1px solid #dcdcdc;
+  }
+  
+  ion-button[color="medium"] {
+    --background: #e0e0e0;
+  }
+  

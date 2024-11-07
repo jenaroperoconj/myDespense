@@ -1,0 +1,55 @@
+ion-header {
+    --background: #ffffff;
+    --color: #000;
+    ion-title {
+      font-weight: bold;
+    }
+  }
+  
+  .scan-area {
+    width: 80%;
+    height: 300px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+  
+  .camera-icon {
+    font-size: 40px;
+    color: #5a5a5a;
+  }
+  
+  .bottom-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .mini-scan-area {
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .camera-icon-small {
+    font-size: 24px;
+    color: #5a5a5a;
+  }
+  
+  .manual-entry-button {
+    --border-radius: 10px;
+    --background: #e0e0e0;
+    --color: #5a5a5a;
+    font-weight: bold;
+    text-transform: none;
+  }
+  

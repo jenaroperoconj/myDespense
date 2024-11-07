@@ -1,0 +1,31 @@
+<ion-content class="profile-container">
+  <div class="profile-picture">
+    <ion-avatar>
+      <img src="https://via.placeholder.com/100" alt="Profile Picture">
+    </ion-avatar>
+    <ion-button fill="clear" class="edit-pic-button">EDIT PIC</ion-button>
+  </div>
+
+  <form class="profile-form">
+    <ion-item>
+      <ion-input placeholder="Name" value="sainath"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Phone" value="9949791729"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Birthdate" value="14-05-2000"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Gender" value="male"></ion-input>
+    </ion-item>
+
+    <div class="buttons">
+      <ion-button expand="block" fill="solid" color="primary" class="done-button">DONE</ion-button>
+      <ion-button expand="block" fill="outline" color="medium" class="cancel-button">CANCEL</ion-button>
+    </div>
+  </form>
+</ion-content>

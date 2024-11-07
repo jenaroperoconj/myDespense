@@ -1,0 +1,79 @@
+<ion-app>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <ng-container >
+    <!-- Menú lateral -->
+    <ion-menu contentId="main-content" side="start" menuId="main-menu" *ngIf="showLayout">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-item (click)="navigateTo('/home')">
+            <ion-icon slot="start" name="home-outline"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+
+          <ion-item (click)="navigateTo('/products')">
+            <ion-icon slot="start" name="grid-outline"></ion-icon>
+            <ion-label>Mis Productos</ion-label>
+          </ion-item>
+
+          <ion-item (click)="navigateTo('/add-product')">
+            <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+            <ion-label>Agregar un Producto</ion-label>
+          </ion-item>
+
+          <ion-item (click)="openModal()">
+            <ion-icon slot="start" name="people-outline"></ion-icon>
+            <ion-label>Compartir mi Despensa</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+
+      <ion-footer>
+        <ion-button expand="full" color="medium" fill="solid" (click)="logout()">
+          <ion-icon slot="start" name="log-out-outline"></ion-icon>
+          Cerrar Sesión
+        </ion-button>
+      </ion-footer>
+    </ion-menu>
+
+    <!-- Botón flotante -->
+    <ion-fab slot="fixed" vertical="bottom" horizontal="center" style="margin-bottom: 20px;" *ngIf="showLayout">
+      <ion-fab-button (click)="navigateTo('/scan-product')">
+        <ion-icon name="qr-code"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <!-- Tabs -->
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" *ngIf="showLayout">
+        <ion-tab-button tab="home" (click)="navigateTo('/home')">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="products" (click)="navigateTo('/products')">
+          <ion-icon name="book-outline"></ion-icon>
+          <ion-label>Mis Productos</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="wishlist" (click)="navigateTo('/wishlist')">
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-label>Mi Lista</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="profile" (click)="navigateTo('/profile')">
+          <ion-icon name="person-sharp"></ion-icon>
+          <ion-label>Mi cuenta</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+    
+  </ng-container>
+</ion-app>

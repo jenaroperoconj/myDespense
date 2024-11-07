@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Compartir Despensa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<p>Personas a quienes compartir</p>
+
+<ion-content >
+  <form class="profile-form">
+    <ion-item>
+      <ion-input placeholder="Name"  value="sainath"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Email"  value="sainathbsn1729@gmail.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Phone"  value="9949791729"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Birthdate"  value="14-05-2000"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Gender"  value="male"></ion-input>
+    </ion-item>
+
+    <div class="buttons">
+      
+      <ion-button expand="block" fill="solid" color="primary" class="done-button">DONE</ion-button>
+      <ion-button expand="block" fill="outline" color="medium" class="cancel-button">CANCEL</ion-button>
+      
+    </div>
+  </form>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Escanea el producto a añadir</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Área principal para el escaneo del producto -->
+  <div class="scan-area">
+    <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
+  </div>
+
+  <!-- Área secundaria con un botón de cámara más pequeño -->
+  <div class="bottom-area">
+    <div class="mini-scan-area">
+      <ion-icon name="camera-outline" class="camera-icon-small"></ion-icon>
+    </div>
+
+    <!-- Botón para ingresar manualmente -->
+    <ion-button expand="block" fill="outline" color="medium" class="manual-entry-button" (click)="navigateTo('/add-product')">
+      <ion-icon name="create-outline" slot="start"></ion-icon>
+      Ingresar Manualmente
+    </ion-button>
+  </div>
+</ion-content>

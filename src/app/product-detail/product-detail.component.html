@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalle del Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="productForm" (ngSubmit)="guardarCambios()">
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label position="stacked">Nombre del Producto</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Marca</ion-label>
+        <ion-input formControlName="marca"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Cantidad</ion-label>
+        <ion-input type="number" formControlName="cantidad"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Fecha de Vencimiento</ion-label>
+        <ion-datetime id="fechaVencimiento" formControlName="fechaVencimiento" presentation="date" [min]="minDate">
+        </ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Categoría</ion-label>
+        <ion-input formControlName="categoria"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">SKU</ion-label>
+        <ion-input formControlName="sku"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button expand="block" color="success" type="submit">
+        Guardar Cambios
+      </ion-button>
+      <ion-button expand="block" color="danger" (click)="eliminarProducto()">
+        Eliminar Producto
+      </ion-button>
+    </div>
+  </form>
+
+</ion-content>
