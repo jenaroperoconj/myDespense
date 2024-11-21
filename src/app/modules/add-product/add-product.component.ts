@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FirestoreService } from '../common/services/firestore/firestore.service';
+import { FirestoreService } from '../../common/services/firestore/firestore.service';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule, Location } from '@angular/common';
 

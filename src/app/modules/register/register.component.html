@@ -1,0 +1,47 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-segment value="signup">
+      <ion-segment-button value="signup" checked>
+        Registrarse
+      </ion-segment-button>
+      <ion-segment-button value="signin" (click)="onLoginButtonPressed()">
+        Ingresar
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-content">
+  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <h2 class="form-title">Crea una Cuenta</h2>
+
+    <!-- Nombre de usuario -->
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input formControlName="displayName" placeholder="Pedro"></ion-input>
+    </ion-item>
+
+    <!-- Email -->
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email" placeholder="pe.dro@gmail.com"></ion-input>
+    </ion-item>
+
+    <!-- Contraseña -->
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" placeholder="******"></ion-input>
+    </ion-item>
+
+    <!-- Confirmar contraseña -->
+    <ion-item>
+      <ion-label position="floating">Repite tu Contraseña</ion-label>
+      <ion-input formControlName="confirmPassword" type="password" placeholder="******"></ion-input>
+    </ion-item>
+
+    <!-- Botón de registro -->
+    <ion-button expand="full" type="submit" [disabled]="registerForm.invalid">
+      Registrarse
+    </ion-button>
+  </form>
+</ion-content>

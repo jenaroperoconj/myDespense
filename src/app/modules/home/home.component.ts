@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { RecipeService } from '../common/services/recipe/recipe.service';
-import { FirestoreService } from '../common/services/firestore/firestore.service';
+import { RecipeService } from '../../common/services/recipe/recipe.service';
+import { FirestoreService } from '../../common/services/firestore/firestore.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

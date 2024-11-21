@@ -1,0 +1,54 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-segment value="signin">
+      <ion-segment-button value="signup" (click)="onRegisterButtonPressed()">
+        Registrarse
+      </ion-segment-button>
+      <ion-segment-button value="signin" checked>
+        Ingresar
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-content">
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="form-container">
+    <h2 class="form-title">Bienvenido nuevamente!</h2>
+    <p class="form-subtitle">Por favor Ingresa tus credenciales</p>
+
+    <!-- Email -->
+    <ion-item class="custom-item">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+
+    <!-- Password -->
+    <ion-item class="custom-item">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+
+    <!-- Remember Password -->
+    <ion-item lines="none">
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Recordar Contraseña</ion-label>
+      <a class="forgot-password" href="#">Contraseña Olvidada?</a>
+    </ion-item>
+
+    <!-- Sign In Button -->
+    <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Ingresar</ion-button>
+
+    <div class="divider">O ingresa con</div>
+
+    <!-- Social Buttons -->
+    <div class="social-buttons">
+      <ion-button color="light">Google</ion-button>
+      <ion-button color="light">Facebook</ion-button>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="loginError" class="error-message">
+      {{ loginError }}
+    </div>
+  </form>
+</ion-content>

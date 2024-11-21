@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
 import { provideRouter } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { LoginComponent } from './login/login.component';
-import { ShareMyDespenseComponent } from './share-my-despense/share-my-despense.component';
-import { AddProductComponent } from './add-product/add-product.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { RegisterComponent } from './register/register.component';
-import { WishlistComponent } from './wishlist/wishlist.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ScanProductComponent } from './scan-product/scan-product.component';
+import { HomeComponent } from './modules/home/home.component';
+import { ProductsComponent } from './modules/products/products.component';
+import { LoginComponent } from './modules/login/login.component';
+import { ShareMyDespenseComponent } from './modules/share-my-despense/share-my-despense.component';
+import { AddProductComponent } from './modules/add-product/add-product.component';
+import { ProductDetailComponent } from './modules/product-detail/product-detail.component';
+import { RegisterComponent } from './modules/register/register.component';
+import { WishlistComponent } from './modules/wishlist/wishlist.component';
+import { ProfileComponent } from './modules/profile/profile.component';
+import { ScanProductComponent } from './modules/scan-product/scan-product.component';
 
 
 export const routes: Routes = [

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { UserService } from '../common/services/user/user.service';
+import { UserService } from '../../common/services/user/user.service';
 
 @Component({
   selector: 'app-profile',
